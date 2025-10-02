@@ -29,28 +29,69 @@
   <meta property="og:image" content="og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <style>
-    :root { --bg:#0f1217; --fg:#e9ecf1; --muted:#98a2b3; --brand:#5aa9ff; --card:#171b22; }
-    *{ box-sizing:border-box; }
-    body{ margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; color:var(--fg); background:linear-gradient(180deg,#0b0e12,#0f1217 30%); }
-    a{ color:inherit; text-decoration:none; }
-    .wrap{ max-width:980px; margin:0 auto; padding:32px; }
-    header{ display:flex; align-items:center; gap:14px; padding:16px 0; }
-    header img{ height:72px; display:block; }
-    .tag{ color:var(--muted); font-size:12px; margin-top:-2px; }
-    .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:28px; padding:38px 0; }
-    .card{ background:var(--card); border:1px solid #222836; border-radius:16px; padding:20px; }
-    h1{ margin:0 0 6px; font-size:40px; letter-spacing:.3px; }
-    .muted{ color:var(--muted); }
-    .btns{ display:flex; gap:12px; flex-wrap:wrap; margin:22px 0; }
-    .btn{ padding:12px 16px; border-radius:10px; border:1px solid #2a2f3a; background:#141922; color:var(--fg); }
-    .btn.primary{ background:var(--brand); color:#03122a; border-color:#2f73ff; font-weight:600; }
-    .btn.disabled{ opacity:.5; pointer-events:none; }
-    .features{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    ul{ margin:0; padding-left:18px; }
-    footer{ margin:40px 0 12px; color:#8791a3; font-size:14px; }
-    @media (max-width:800px){ .hero{ grid-template-columns:1fr; } }
-  </style>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #222;
+  text-align: center;
+}
+
+header {
+  padding: 2em 1em;
+  background: linear-gradient(90deg, #0057b7, #4aa3ff);
+  color: white;
+}
+
+header img {
+  height: 72px;
+}
+
+header .tag {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  color: #e6ebf2;
+}
+
+.btns {
+  margin: 2em 0;
+}
+
+a.btn {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+a.btn.primary {
+  background: #0057b7;
+  color: white;
+}
+
+a.btn.primary:hover {
+  background: #004299;
+}
+
+a.btn {
+  background: #e6ebf2;
+  color: #0057b7;
+}
+
+a.btn:hover {
+  background: #d3deeb;
+}
+
+footer {
+  margin-top: 3em;
+  padding: 1em;
+  background: #e6ebf2;
+  color: #555;
+  font-size: 0.9em;
+}
 </head>
 <body>
   <div class="wrap">
