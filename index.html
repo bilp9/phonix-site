@@ -1,163 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Phonix — Transcription, Simplified</title>
-  <meta name="description" content="Phonix is a lightweight, privacy-first transcription player with global hotkeys, pedal-ready controls, speed control, auto-rewind and loop. Files stay on your device." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Social sharing -->
   <meta property="og:title" content="Phonix — Transcription, Simplified">
-  <meta property="og:description" content="Privacy-first transcription player with global hotkeys, pedal-ready controls, and speed control. Local-only.">
+  <meta property="og:description" content="Privacy-first transcription player with hotkeys, pedal-ready controls, and speed options. Local-only.">
   <meta property="og:image" content="https://www.phonixplayer.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #222;
+      text-align: center;
+    }
 
-<!-- (Optional) Google Analytics GA4 -->
-<!-- Replace G-XXXXXXX with THE Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXX');
-</script>
+    header {
+      padding: 2em 1em;
+      background: linear-gradient(90deg, #0057b7, #4aa3ff);
+      color: white;
+    }
 
-  <!-- Social preview (optional; I will add og.png later ) -->
-  <meta property="og:title" content="Phonix — Transcription, Simplified" />
-  <meta property="og:description" content="Privacy-first transcription player with global hotkeys, pedal-ready controls, and speed control. Local-only. No uploads." />
-  <meta property="og:image" content="og.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+    header img {
+      height: 72px;
+    }
 
- body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f7f9fc;
-  color: #222;
-  text-align: center;
-}
+    header .tag {
+      margin-top: 0.5em;
+      font-size: 1.2em;
+      color: #e6ebf2;
+    }
 
-header {
-  padding: 2em 1em;
-  background: linear-gradient(90deg, #0057b7, #4aa3ff);
-  color: white;
-}
+    .btns {
+      margin: 2em 0;
+    }
 
-header img {
-  height: 72px;
-}
+    a.btn {
+      display: inline-block;
+      margin: 0.5em;
+      padding: 0.75em 1.5em;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
 
-header .tag {
-  margin-top: 0.5em;
-  font-size: 1.2em;
-  color: #e6ebf2;
-}
+    a.btn.primary {
+      background: #0057b7;
+      color: white;
+    }
 
-.btns {
-  margin: 2em 0;
-}
+    a.btn.primary:hover {
+      background: #004299;
+    }
 
-a.btn {
-  display: inline-block;
-  margin: 0.5em;
-  padding: 0.75em 1.5em;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
+    a.btn {
+      background: #e6ebf2;
+      color: #0057b7;
+    }
 
-a.btn.primary {
-  background: #0057b7;
-  color: white;
-}
+    a.btn:hover {
+      background: #d3deeb;
+    }
 
-a.btn.primary:hover {
-  background: #004299;
-}
+    footer {
+      margin-top: 3em;
+      padding: 1em;
+      background: #e6ebf2;
+      color: #555;
+      font-size: 0.9em;
+    }
 
-a.btn {
-  background: #e6ebf2;
-  color: #0057b7;
-}
+    footer a {
+      color: #0057b7;
+      text-decoration: none;
+    }
 
-a.btn:hover {
-  background: #d3deeb;
-}
-
-footer {
-  margin-top: 3em;
-  padding: 1em;
-  background: #e6ebf2;
-  color: #555;
-  font-size: 0.9em;
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- Header with THE logo -->
-    <header>
-      <img src="phonix_logo_secondary.png" alt="Phonix logo" />
-      <div class="tag">Transcription, Simplified</div>
-    </header>
 
-    <section class="hero">
-      <div class="card">
-        <h1>Transcription, Simplified.</h1>
-        <p class="muted">
-          A lightweight, privacy-first transcription player with global hotkeys, pedal-ready controls,
-          speed control, auto-rewind and loop. Files stay on your device.
-        </p>
+  <header>
+    <img src="phonix_logo_secondary.png" alt="Phonix logo">
+    <div class="tag">Transcription, Simplified</div>
+  </header>
 
-        <!-- Download buttons (disabled for now) -->
-        <div class="btns">
-          <a class="btn primary disabled" href="#" title="Coming soon">Download for Windows (Coming soon)</a>
-          <a class="btn disabled" href="#" title="Coming soon">Download for macOS (Coming soon)</a>
-        </div>
+  <main>
+    <h1>Welcome to Phonix</h1>
+    <p>Phonix is a privacy-first transcription player designed for linguists, journalists, and professionals.<br>
+    Control playback with global hotkeys or pedals, adjust speed, and transcribe faster.</p>
 
-        <div class="features">
-          <div>
-            <h3 style="margin:8px 0 6px;">Why Phonix</h3>
-            <ul>
-              <li>Global hotkeys (works while you type)</li>
-              <li>Pedal-ready at launch (keyboard-mode)</li>
-              <li>Speed control & auto-rewind</li>
-              <li>Light/Dark themes</li>
-            </ul>
-          </div>
-          <div>
-            <h3 style="margin:8px 0 6px;">Privacy</h3>
-            <ul>
-              <li>Local-only playback</li>
-              <li>No uploads, no tracking</li>
-              <li>Resume last file (optional)</li>
-              <li>Roadmap: HID pedals, bookmarks</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="btns">
+      <a class="btn primary disabled" href="#" title="Coming soon">Download for Windows (Coming soon)</a>
+      <a class="btn disabled" href="#" title="Coming soon">Download for macOS (Coming soon)</a>
+    </div>
+  </main>
 
-      <div class="card">
-        <h3 style="margin-top:0">Get started</h3>
-        <ol style="margin:0; padding-left:18px">
-          <li>Download and install Phonix</li>
-          <li>Open an audio file</li>
-          <li>Enable global hotkeys (and pedal, if you have one)</li>
-          <li>Start typing in your editor</li>
-        </ol>
-        <p class="muted" style="margin-top:14px">
-          Questions? <a href="mailto:support@phonixplayer.com" style="color:#9cc7ff">support@phonixplayer.com</a>
-        </p>
-      </div>
-    </section>
+  <footer>
+    © 2025 Pierre Consulting Group LLC
+    • <a href="eula.html">EULA</a>
+    • <a href="privacy.html">Privacy</a>
+  </footer>
 
-    <footer>
-  © Pierre Consulting Group LLC
-  • <a href="eula.html" style="color:#9cc7ff">EULA</a>
-  • <a href="privacy.html" style="color:#9cc7ff">Privacy</a>
-</footer>
-  </div>
-
-  
 </body>
 </html>
