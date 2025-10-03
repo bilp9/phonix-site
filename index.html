@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" href="favicon.ico">
 
-  <!-- Social sharing meta tags remain the same -->
+  <!-- Social sharing meta tags -->
   <meta property="og:title" content="Phonix — Transcription, Simplified">
   <meta property="og:description" content="Privacy-first transcription player with hotkeys, pedal-ready controls, and speed options. Local-only.">
   <meta property="og:image" content="https://www.phonixplayer.com/og.png">
@@ -37,13 +37,29 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
-    header img {
-      height: 72px;
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand img {
+      height: 60px;
+      border-radius: 12px;
       transition: transform 0.3s ease;
     }
 
-    header img:hover {
+    .brand img:hover {
       transform: scale(1.05);
+    }
+
+    .brand h1 {
+      font-size: 2.2em;
+      font-weight: 800;
+      margin: 0;
+      color: white;
     }
 
     header .tag {
@@ -136,7 +152,7 @@
       text-decoration: none;
     }
 
-    /* Added feature boxes */
+    /* Feature boxes */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -177,7 +193,10 @@
 </head>
 <body>
   <header>
-    <img src="phonix_logo_secondary.png" alt="Phonix logo">
+    <div class="brand">
+      <img src="phonix_icon.png" alt="Phonix icon">
+      <h1>Phonix</h1>
+    </div>
     <div class="tag">Transcription, Simplified</div>
   </header>
 
